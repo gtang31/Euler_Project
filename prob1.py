@@ -7,6 +7,6 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 a = range(1000)
 total = 0
 for value in a:
-    if(value%3 == 0 or value%5 == 0):
-        total = total + value
+    if (value%3 == 0) or (value%5 == 0):
+        total += value
 print total

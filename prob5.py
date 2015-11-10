@@ -12,15 +12,12 @@ from 1 to 20?
 # 20 because thats the biggest number, also the smallest possible value
 # divisible by all numbers from 1-20 should also be a multiple of 20
 
-import time
-
-start_time = time.time()
 number = 20
 while True:
-    if number%20 == 0 and number%19 == 0 and number%18 == 0 and number%17 == 0 and number%16 == 0 and number%15 == 0 and number%14 == 0 and number%13 == 0 and number%12 == 0 and number%11 == 0:
+    if (number%20 == 0) and (number%19 == 0) and (number%18 == 0) and (number%17 == 0)\
+    	and (number%16 == 0) and (number%15 == 0) and (number%14 == 0) and (number%13 == 0)\
+    	and number%12 == 0 and number%11 == 0:
         break;
     else:
         number += 20
-end_time = time.time()
-print 'Elapsed time',end_time-start_time
-#print number
+print number
