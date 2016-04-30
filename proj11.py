@@ -9,8 +9,8 @@ import numpy
 import time
 from operator import mul
 
-# import the grid
-grid = numpy.loadtxt('Proj11_LargestProductInGrid.txt')
+# load the .txt file containing the grid
+grid = numpy.loadtxt("proj11_grid.txt")
 print grid
 product = 0
 
