@@ -18,20 +18,17 @@ right and down.
 from numpy import loadtxt
 from time import time
 
-matrix = loadtxt('Proj81_matrix.txt', delimiter = ',')
+matrix = loadtxt('proj81_matrix.txt', delimiter = ',')
 #matrix = loadtxt('proj81.txt', comments = '#')
 curr_row = 1
 def ShortestPathSum(curr_row,matrix):
     for col in range(1,len(matrix)):
         matrix[curr_row,col] += \
-         min(matrix[curr_row-1,col],matrix[curr_row,col-1])
-        #print matrix[curr_row,col]
-        #print matrix
+         min(matrix[curr_row-1,col], matrix[curr_row,col-1])
     if curr_row == len(matrix)-1:
-        # stop once we rached the NxN'th element
+        # stop once we reached the NxN'th element
         return matrix[curr_row,col]
     else:
-        # call recursion
         return ShortestPathSum(curr_row+1,matrix)
 
     
